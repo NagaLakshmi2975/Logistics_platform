@@ -1,0 +1,883 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap");
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #f5f3ee;
+  color: #181817;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =========================================================
+   GLOBAL APP
+========================================================= */
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 85% 5%,
+      rgba(188, 161, 104, 0.08),
+      transparent 28%
+    ),
+    #f5f3ee;
+}
+
+/* =========================================================
+   AUTHENTICATION
+========================================================= */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.7),
+      rgba(241, 238, 230, 0.9)
+    );
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  border: 1px solid rgba(24, 24, 23, 0.1);
+
+  border-radius: 4px;
+
+  padding: 52px 48px;
+
+  box-shadow:
+    0 30px 80px rgba(24, 24, 23, 0.08),
+    0 4px 20px rgba(24, 24, 23, 0.03);
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 45px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #1b1b19;
+  color: #d1b477;
+
+  border-radius: 50%;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.brand h1 {
+  font-size: 15px;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1b1b19;
+}
+
+/* =========================================================
+   AUTH HEADINGS
+========================================================= */
+
+.auth-card h2 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 38px;
+  line-height: 1.1;
+
+  font-weight: 500;
+
+  color: #181817;
+
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: #8b887f;
+  font-size: 13px;
+  line-height: 1.7;
+
+  margin-bottom: 35px;
+}
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+
+  color: #55534e;
+}
+
+input,
+select {
+  width: 100%;
+
+  padding: 14px 0;
+
+  border: none;
+  border-bottom: 1px solid #d5d1c8;
+
+  background: transparent;
+
+  color: #1b1b19;
+
+  font-size: 14px;
+
+  outline: none;
+
+  border-radius: 0;
+
+  transition: border-color 0.25s ease;
+}
+
+input::placeholder {
+  color: #aaa69d;
+}
+
+input:focus,
+select:focus {
+  border-bottom-color: #1b1b19;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+form button {
+  margin-top: 12px;
+
+  padding: 15px 22px;
+
+  background: #1b1b19;
+  color: #fff;
+
+  border-radius: 2px;
+
+  border: 1px solid #1b1b19;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  transition: all 0.25s ease;
+}
+
+form button:hover {
+  background: #d1b477;
+  border-color: #d1b477;
+  color: #181817;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   AUTH SWITCH
+========================================================= */
+
+.switch-text {
+  margin-top: 30px;
+
+  text-align: center;
+
+  color: #8b887f;
+
+  font-size: 12px;
+}
+
+.link-button {
+  margin-left: 5px;
+
+  padding: 0;
+
+  background: transparent;
+
+  color: #1b1b19;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  border: none;
+}
+
+.link-button:hover {
+  color: #b09259;
+}
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.success {
+  padding: 12px 15px;
+
+  background: #f1f5ef;
+
+  border: 1px solid #d8e2d3;
+
+  color: #506149;
+
+  font-size: 12px;
+
+  margin-bottom: 20px;
+}
+
+.error {
+  padding: 12px 15px;
+
+  background: #f8eeee;
+
+  border: 1px solid #ead5d5;
+
+  color: #8b4e4e;
+
+  font-size: 12px;
+
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.dashboard {
+  min-height: 100vh;
+
+  background: #f5f3ee;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  background: rgba(245, 243, 238, 0.94);
+
+  border-bottom: 1px solid rgba(24, 24, 23, 0.08);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+
+  backdrop-filter: blur(16px);
+}
+
+.navbar .brand {
+  margin: 0;
+}
+
+.navbar .brand-icon {
+  width: 36px;
+  height: 36px;
+
+  font-size: 13px;
+}
+
+.navbar .brand h1 {
+  font-size: 13px;
+  letter-spacing: 2.5px;
+}
+
+.logout-button {
+  padding: 10px 20px;
+
+  background: transparent;
+
+  border: 1px solid #c9c5bc;
+
+  border-radius: 2px;
+
+  color: #383733;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+
+  text-transform: uppercase;
+
+  transition: all 0.25s ease;
+}
+
+.logout-button:hover {
+  background: #1b1b19;
+  color: white;
+
+  border-color: #1b1b19;
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main-content {
+  max-width: 1380px;
+
+  margin: 0 auto;
+
+  padding: 70px 6% 100px;
+}
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.welcome-section {
+  margin-bottom: 55px;
+
+  position: relative;
+}
+
+.welcome-section::before {
+  content: "LOGISTICS CONTROL";
+
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #b09259;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.welcome-section h2 {
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -1.8px;
+
+  color: #181817;
+
+  margin-bottom: 18px;
+}
+
+.welcome-section p {
+  color: #858178;
+
+  font-size: 14px;
+
+  max-width: 500px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   DASHBOARD GRID
+========================================================= */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card {
+  background: #fffefa;
+
+  border: 1px solid #dedbd3;
+
+  border-radius: 3px;
+
+  padding: 34px;
+
+  box-shadow:
+    0 12px 40px rgba(24, 24, 23, 0.035);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 20px 50px rgba(24, 24, 23, 0.07);
+}
+
+.card h3 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+
+  color: #181817;
+
+  margin-bottom: 8px;
+}
+
+.card > p {
+  color: #98948a;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  margin-bottom: 27px;
+}
+
+.card form {
+  gap: 17px;
+}
+
+/* =========================================================
+   SHIPMENT LIST
+========================================================= */
+
+.shipment-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1px;
+
+  border-top: 1px solid #e2dfd8;
+}
+
+.shipment-item {
+  padding: 20px 0;
+
+  background: transparent;
+
+  border-bottom: 1px solid #e2dfd8;
+
+  border-radius: 0;
+
+  transition: padding 0.2s ease;
+}
+
+.shipment-item:hover {
+  padding-left: 8px;
+
+  border-color: #d1b477;
+
+  box-shadow: none;
+
+  transform: none;
+}
+
+.shipment-item strong {
+  display: block;
+
+  color: #1b1b19;
+
+  font-size: 13px;
+
+  letter-spacing: 0.2px;
+
+  margin-bottom: 7px;
+}
+
+.shipment-item p {
+  color: #858178;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  margin: 2px 0;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-top: 10px;
+
+  padding: 5px 10px;
+
+  background: #f1eee7;
+
+  color: #716246;
+
+  border: 1px solid #dfd6c4;
+
+  border-radius: 1px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty {
+  padding: 35px 10px;
+
+  color: #a09c93;
+
+  font-size: 12px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   TRACKING CARD
+========================================================= */
+
+.tracking-card {
+  grid-column: 1 / -1;
+}
+
+/* =========================================================
+   TRACKING SEARCH
+========================================================= */
+
+.tracking-search {
+  display: flex;
+
+  gap: 18px;
+
+  margin-bottom: 38px;
+}
+
+.tracking-search input {
+  flex: 1;
+
+  border: 1px solid #d8d4cb;
+
+  padding: 14px 16px;
+
+  background: #fffefa;
+
+  border-radius: 2px;
+}
+
+.tracking-search input:focus {
+  border-color: #1b1b19;
+}
+
+.tracking-search button {
+  min-width: 130px;
+
+  background: #1b1b19;
+
+  color: white;
+
+  border-radius: 2px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
+}
+
+.tracking-search button:hover {
+  background: #d1b477;
+  color: #181817;
+}
+
+/* =========================================================
+   TRACKING TIMELINE
+========================================================= */
+
+.tracking-list {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding-left: 8px;
+}
+
+.tracking-event {
+  position: relative;
+
+  display: flex;
+
+  gap: 20px;
+
+  padding: 0 0 32px 5px;
+}
+
+.tracking-event:not(:last-child)::before {
+  content: "";
+
+  position: absolute;
+
+  left: 10px;
+
+  top: 17px;
+
+  bottom: 0;
+
+  width: 1px;
+
+  background: #d9d5cc;
+}
+
+.event-dot {
+  position: relative;
+
+  z-index: 2;
+
+  flex-shrink: 0;
+
+  width: 11px;
+  height: 11px;
+
+  margin-top: 4px;
+
+  border-radius: 50%;
+
+  background: #d1b477;
+
+  border: 2px solid #f5f3ee;
+
+  box-shadow: 0 0 0 1px #d1b477;
+}
+
+.tracking-event strong {
+  display: block;
+
+  color: #181817;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  margin-bottom: 6px;
+}
+
+.tracking-event p {
+  color: #77736b;
+
+  font-size: 12px;
+
+  margin-bottom: 5px;
+}
+
+.tracking-event small {
+  color: #aaa59b;
+
+  font-size: 10px;
+
+  letter-spacing: 0.3px;
+}
+
+/* =========================================================
+   GENERAL CARD BUTTONS
+========================================================= */
+
+.card button {
+  background: #1b1b19;
+
+  color: white;
+
+  border-radius: 2px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+
+  text-transform: uppercase;
+}
+
+.card button:hover {
+  background: #d1b477;
+
+  color: #181817;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+.card button[type="button"] {
+  background: #eeeae1;
+
+  color: #4f4b43;
+
+  border: 1px solid #dcd7cd;
+}
+
+.card button[type="button"]:hover {
+  background: #1b1b19;
+
+  color: white;
+
+  border-color: #1b1b19;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tracking-card {
+    grid-column: auto;
+  }
+
+  .main-content {
+    padding: 55px 5% 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 70px;
+
+    padding: 0 20px;
+  }
+
+  .navbar .brand h1 {
+    font-size: 11px;
+  }
+
+  .logout-button {
+    padding: 8px 12px;
+
+    font-size: 9px;
+  }
+
+  .main-content {
+    padding: 45px 18px 60px;
+  }
+
+  .welcome-section {
+    margin-bottom: 38px;
+  }
+
+  .welcome-section h2 {
+    font-size: 42px;
+
+    letter-spacing: -1px;
+  }
+
+  .card {
+    padding: 25px 20px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  .auth-card {
+    padding: 40px 27px;
+  }
+
+  .auth-card h2 {
+    font-size: 33px;
+  }
+
+  .tracking-search {
+    flex-direction: column;
+  }
+
+  .tracking-search button {
+    width: 100%;
+    padding: 14px;
+  }
+}
